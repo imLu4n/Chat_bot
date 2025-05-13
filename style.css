@@ -1,0 +1,306 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #000000; 
+    color: #F1F1F1;
+    line-height: 1.6;
+}
+
+.Lex{
+    border: 2px solid #7a7a7a;
+    display: flex;
+    gap: 80px;
+    width: 100%;
+    height: 100px;
+    white-space: nowrap;
+}
+.Lex h1{
+    padding: 15px 10px;
+    color: #9C37FF;
+}
+.Lex_barra {
+    display: flex;
+    gap: 50px; /* Espaçamento entre os itens */
+    list-style: none;
+    padding: 20px 20px;
+    text-align: center;
+}
+
+.Lex_barra li {
+    padding: 15px 20px; /* Espaçamento interno (como botão) */
+    background-color: #9C4DF4; /* Cor de fundo do botão */
+    border-radius: 5px; /* Bordas arredondadas */
+    color: white; /* Cor do texto */
+    cursor: pointer; /* Muda o cursor para parecer clicável */
+    transition: background-color 0.3s; /* Efeito hover suave */
+}
+
+.Lex_barra li:hover {
+    background-color: #7B2DD1; /* Cor ao passar o mouse */
+}
+
+.Login{
+    display: flex;
+    gap: 20px; /* Espaçamento entre os itens */
+    list-style: none;
+    padding: 20px 900px;
+    text-align: center;
+}
+
+.Login li{
+    padding: 15px 20px; /* Espaçamento interno (como botão) */
+    border: 2px solid #FFFFFF;
+    border-radius: 5px; /* Bordas arredondadas */
+    color: white; /* Cor do texto */
+    cursor: pointer; /* Muda o cursor para parecer clicável */
+    transition: background-color 0.3s; /* Efeito hover suave */
+}
+
+.Login li:hover {
+    background-color: #7B2DD1; /* Cor ao passar o mouse */
+}
+
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+section {
+    text-align: center;
+}
+
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #FFFFFF;
+}
+
+h2 {
+
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #9C37FF;
+    
+}
+
+.container h2 a{
+    color: #FFFFFF;
+}
+
+h3 {
+    font-size: 1.4rem;
+    margin: 20px 0;
+    color: #000000; /* Texto escuro nos cartões brancos */
+}
+
+p {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    color: #333333; /* Texto escuro nos cartões brancos */
+}
+
+.highlight {
+    background-color: #9C37FF;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+    margin: 20px 0;
+    font-weight: bold;
+}
+
+.cta-button {
+    background-color: #9C37FF;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin: 20px 0;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #7B2DD1;
+}
+
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin: 40px 0;
+}
+
+.feature-card img{
+    border: 2px solid #9C4DF4;
+    box-shadow: 0 0 15px 5px rgba(156, 77, 244, 0.6);
+}
+
+.testimonials {
+    background-color: #1A1A1A;
+    padding: 40px 20px;
+}
+
+.testimonial {
+    font-style: italic;
+    margin: 20px auto;
+    max-width: 800px;
+    background: #FFFFFF; /* Depoimentos brancos */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: #000000;
+}
+
+footer {
+    background-color: #111111;
+    color: #AAAAAA;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+.container2{
+    padding: 100px;
+    background-color: #F5F7FA;
+
+}
+
+.container2 h2{
+    color: #000000;
+}
+.container2 a{
+    color: #9C37FF;
+}
+
+.quem_somos{
+    padding: 50px;
+    max-width: 500px;      
+    margin: 50px auto;     
+    text-align: center;
+}
+
+.quem_somos h1{
+    color: #9C37FF;
+}
+.quem_somos p{
+    color: #fff;
+}
+
+.ex{
+    text-align: center;
+    display: flex;
+}
+
+.prof{
+    color: #FFFFFF;
+    padding: 50px;
+    max-width: 400px;      
+    margin: 50px auto;     
+    text-align: center;
+}
+
+.prof p{
+    color: #F1F1F1;
+}
+
+.testemunha {
+    background-color: #FFFFFF;
+}
+
+.funciona{
+    background-color: #F1F1F1;
+    padding: 60px;
+}
+
+.fim p{
+    padding: 20px;
+    color: #FFFFFF;
+    max-width: 600px;  
+    text-align: center;
+    margin: 50px auto; 
+}
+
+.fim h1{
+    padding: 40px;
+}
+
+.fim h1 a{
+
+    color: #9C37FF;
+}
+
+#auth-forms {
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+    background-color: #f2f2f2;
+    flex-direction: column;
+    display: flex;
+  }
+  
+  .form-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .form-box {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .form-box h2 {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .form-box input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+  }
+  
+  .form-box button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4A00E0;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .form-box button:hover {
+    background-color: #6a00ff;
+  }
+  
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .features {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+ 
