@@ -6,67 +6,80 @@
 }
 
 body {
-    background-color: #000000; 
+    background-color: #000000;
     color: #F1F1F1;
     line-height: 1.6;
+    overflow-x: hidden;
+    width: 100%;
 }
 
-.Lex{
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.Lex {
     border: 2px solid #7a7a7a;
     display: flex;
-    gap: 80px;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
     width: 100%;
-    height: 100px;
-    white-space: nowrap;
+    padding: 10px 20px;
+    height: auto;
 }
-.Lex h1{
-    padding: 15px 10px;
+
+.Lex h1 {
     color: #9C37FF;
 }
+
 .Lex_barra {
     display: flex;
-    gap: 50px; /* Espaçamento entre os itens */
+    gap: 20px;
     list-style: none;
-    padding: 20px 20px;
     text-align: center;
+    flex-wrap: wrap;
 }
 
 .Lex_barra li {
-    padding: 15px 20px; /* Espaçamento interno (como botão) */
-    background-color: #9C4DF4; /* Cor de fundo do botão */
-    border-radius: 5px; /* Bordas arredondadas */
-    color: white; /* Cor do texto */
-    cursor: pointer; /* Muda o cursor para parecer clicável */
-    transition: background-color 0.3s; /* Efeito hover suave */
+    padding: 10px 15px;
+    background-color: #9C4DF4;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 .Lex_barra li:hover {
-    background-color: #7B2DD1; /* Cor ao passar o mouse */
+    background-color: #7B2DD1;
 }
 
-.Login{
+.Login {
     display: flex;
-    gap: 20px; /* Espaçamento entre os itens */
+    gap: 10px;
     list-style: none;
-    padding: 20px 900px;
     text-align: center;
+    flex-wrap: wrap;
 }
 
-.Login li{
-    padding: 15px 20px; /* Espaçamento interno (como botão) */
+.Login li {
+    padding: 10px 15px;
     border: 2px solid #FFFFFF;
-    border-radius: 5px; /* Bordas arredondadas */
-    color: white; /* Cor do texto */
-    cursor: pointer; /* Muda o cursor para parecer clicável */
-    transition: background-color 0.3s; /* Efeito hover suave */
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 .Login li:hover {
-    background-color: #7B2DD1; /* Cor ao passar o mouse */
+    background-color: #7B2DD1;
 }
 
-
-.container{
+.container,
+.container2,
+.form-container {
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
@@ -76,7 +89,6 @@ section {
     text-align: center;
 }
 
-
 h1 {
     font-size: 2.5rem;
     margin-bottom: 20px;
@@ -84,27 +96,19 @@ h1 {
 }
 
 h2 {
-
     font-size: 1.8rem;
     margin-bottom: 15px;
     color: #9C37FF;
-    
 }
 
-.container h2 a{
+.container h2 a {
     color: #FFFFFF;
-}
-
-h3 {
-    font-size: 1.4rem;
-    margin: 20px 0;
-    color: #000000; /* Texto escuro nos cartões brancos */
 }
 
 p {
     margin-bottom: 15px;
     font-size: 1.1rem;
-    color: #333333; /* Texto escuro nos cartões brancos */
+    color: #333333;
 }
 
 .highlight {
@@ -141,25 +145,9 @@ p {
     margin: 40px 0;
 }
 
-.feature-card img{
+.feature-card img {
     border: 2px solid #9C4DF4;
     box-shadow: 0 0 15px 5px rgba(156, 77, 244, 0.6);
-}
-
-.testimonials {
-    background-color: #1A1A1A;
-    padding: 40px 20px;
-}
-
-.testimonial {
-    font-style: italic;
-    margin: 20px auto;
-    max-width: 800px;
-    background: #FFFFFF; /* Depoimentos brancos */
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    color: #000000;
 }
 
 footer {
@@ -170,74 +158,83 @@ footer {
     margin-top: 40px;
 }
 
-.container2{
-    padding: 100px;
+.container2 {
+    padding: 100px 20px;
     background-color: #F5F7FA;
-
 }
 
-.container2 h2{
+.container2 h2 {
     color: #000000;
 }
-.container2 a{
+
+.container2 a {
     color: #9C37FF;
 }
 
-.quem_somos{
-    padding: 50px;
-    max-width: 500px;      
-    margin: 50px auto;     
+.quem_somos {
+    padding: 50px 20px;
+    max-width: 500px;
+    margin: 50px auto;
     text-align: center;
 }
 
-.quem_somos h1{
+.quem_somos h1 {
     color: #9C37FF;
 }
-.quem_somos p{
+
+.quem_somos p {
     color: #fff;
 }
 
-.ex{
+.ex {
     text-align: center;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-.prof{
+.prof {
     color: #FFFFFF;
-    padding: 50px;
-    max-width: 400px;      
-    margin: 50px auto;     
+    padding: 30px;
+    max-width: 400px;
     text-align: center;
 }
 
-.prof p{
+.prof p {
     color: #F1F1F1;
 }
 
 .testemunha {
     background-color: #FFFFFF;
+    width: 100%;
+    overflow: hidden;
 }
 
-.funciona{
+.funciona {
     background-color: #F1F1F1;
-    padding: 60px;
+    padding: 60px 20px;
 }
 
-.fim p{
+.fim {
+    text-align: center;
+    padding: 20px;
+}
+
+.fim h1 {
+    padding: 40px 20px;
+    font-size: 2rem;
+}
+
+.fim h1 a {
+    color: #9C37FF;
+}
+
+.fim p {
     padding: 20px;
     color: #FFFFFF;
-    max-width: 600px;  
+    max-width: 600px;
     text-align: center;
-    margin: 50px auto; 
-}
-
-.fim h1{
-    padding: 40px;
-}
-
-.fim h1 a{
-
-    color: #9C37FF;
+    margin: 0 auto;
 }
 
 #auth-forms {
@@ -247,37 +244,37 @@ footer {
     background-color: #f2f2f2;
     flex-direction: column;
     display: flex;
-  }
-  
-  .form-container {
+}
+
+.form-container {
     display: flex;
     justify-content: center;
     width: 100%;
-  }
-  
-  .form-box {
+}
+
+.form-box {
     background: #fff;
     padding: 30px;
     border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    width: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
     max-width: 400px;
-  }
-  
-  .form-box h2 {
+}
+
+.form-box h2 {
     margin-bottom: 20px;
     text-align: center;
-  }
-  
-  .form-box input {
+}
+
+.form-box input {
     width: 100%;
     padding: 12px;
     margin: 10px 0;
     border-radius: 8px;
     border: 1px solid #ccc;
-  }
-  
-  .form-box button {
+}
+
+.form-box button {
     width: 100%;
     padding: 12px;
     background-color: #4A00E0;
@@ -286,21 +283,79 @@ footer {
     border-radius: 8px;
     font-size: 16px;
     cursor: pointer;
-  }
-  
-  .form-box button:hover {
+}
+
+.form-box button:hover {
     background-color: #6a00ff;
-  }
-  
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 
 @media (max-width: 768px) {
     h1 {
         font-size: 2rem;
     }
 
-    .features {
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .Lex_barra,
+    .Login {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .ex {
         flex-direction: column;
         align-items: center;
     }
+
+    .prof {
+        padding: 20px;
+    }
+
+    .fim h1 {
+        font-size: 1.6rem;
+    }
+
+    .fim p {
+        font-size: 1rem;
+    }
 }
- 
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    .highlight,
+    .cta-button {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+
+    .fim h1 {
+        font-size: 1.4rem;
+        padding: 20px 10px;
+    }
+
+    .fim p {
+        font-size: 0.95rem;
+    }
+}

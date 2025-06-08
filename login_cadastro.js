@@ -1,69 +1,60 @@
-Parse.initialize(
-    "zmhvsPHt48anIBjQ9K4a8FyfYPiI5W8z3WDrpjht",
-    "xpzt82gB8lFr3WiY2hKwIMQUuJLzW3LVmPnbMsZk" 
-  );
-  Parse.serverURL = "https://parseapi.back4app.com/";
+Parse.initialize("cyo5uTYlGI2NlY9srrRl7oFFkmMIrRfVLXEykPvD", "OGcWBtub4TtgTCeVMxkm38zr6flC2eKU55yUZaIS");
+Parse.serverURL = "https://parseapi.back4app.com/";
 
-document.addEventListener("DOMContentLoaded", function () {
-    const btnCadastro = document.getElementById("btnCadastro");
-    const btnLogin = document.getElementById("btnLogin");
-    const formCadastro = document.getElementById("form-cadastro");
-    const formLogin = document.getElementById("form-login");
-    const authForms = document.getElementById("auth-forms");
-  
-    btnCadastro.addEventListener("click", () => {
-      authForms.style.display = "flex";
-      formCadastro.style.display = "block";
-      formLogin.style.display = "none";
-      window.scrollTo({ top: authForms.offsetTop, behavior: "smooth" });
-    });
-  
-    btnLogin.addEventListener("click", () => {
-      authForms.style.display = "flex";
-      formLogin.style.display = "block";
-      formCadastro.style.display = "none";
-      window.scrollTo({ top: authForms.offsetTop, behavior: "smooth" });
-    });
-  
-    // CADASTRO
-    formCadastro.querySelector("form").addEventListener("submit", async (e) => {
-      e.preventDefault();
-  
-      const nome = formCadastro.querySelector('input[placeholder="Nome completo"]').value;
-      const email = formCadastro.querySelector('input[placeholder="Email"]').value;
-      const senha = formCadastro.querySelector('input[placeholder="Senha"]').value;
-  
-      const user = new Parse.User();
-      user.set("username", email);
-      user.set("password", senha);
-      user.set("email", email);
-      user.set("nome", nome);
-  
-      try {
-        await user.signUp();
-        alert("✅ Cadastro realizado com sucesso!");
-        formCadastro.querySelector("form").reset();
-      } catch (error) {
-        alert("Erro no cadastro: " + error.message);
-      }
-    });
-  
-    // LOGIN
-    formLogin.querySelector("form").addEventListener("submit", async (e) => {
-      e.preventDefault();
-  
-      const email = formLogin.querySelector('input[placeholder="Email"]').value;
-      const senha = formLogin.querySelector('input[placeholder="Senha"]').value;
-  
-      try {
-        await Parse.User.logIn(email, senha);
-        alert("✅ Login realizado com sucesso!");
-    
-        // Redireciona para a página do chat
-        window.location.href = "/index.html"; 
-      } catch (error) {
-        alert("Erro no login: " + error.message);
-      }
-    });
-  });
-  
+// formulário cadastro
+document.getElementById("btnCadastro").addEventListener("click", () => {
+  document.getElementById("auth-forms").style.display = "block";
+  document.getElementById("form-cadastro").style.display = "block";
+  document.getElementById("form-login").style.display = "none";
+
+  document.getElementById("auth-forms").scrollIntoView({ behavior: "smooth" });
+});
+
+// formulário login
+document.getElementById("btnLogin").addEventListener("click", () => {
+  document.getElementById("auth-forms").style.display = "block";
+  document.getElementById("form-login").style.display = "block";
+  document.getElementById("form-cadastro").style.display = "none";
+
+  document.getElementById("auth-forms").scrollIntoView({ behavior: "smooth" });
+});
+
+//cadastro 
+document.querySelector('#form-cadastro form').addEventListener('submit', async (e) => {
+  e.preventDefault();
+
+  const nome = e.target[0].value;
+  const email = e.target[1].value;
+  const senha = e.target[2].value;
+
+  const user = new Parse.User();
+  user.set("username", email);
+  user.set("password", senha);
+  user.set("email", email);
+  user.set("nomeCompleto", nome);
+
+  try {
+    await user.signUp();
+    alert("Cadastro realizado com sucesso!");
+    e.target.reset();
+    document.getElementById("auth-forms").style.display = "none";
+  } catch (error) {
+    console.error("Erro no cadastro:", error);
+    alert("Erro no cadastro: " + error.message);
+  }
+});
+
+//login
+document.querySelector('#form-login form').addEventListener('submit', async (e) => {
+  e.preventDefault();
+
+  const email = e.target[0].value;
+  const senha = e.target[1].value;
+
+  try {
+    await Parse.User.logIn(email, senha);
+    window.location.href = "chat.html"; 
+  } catch (error) {
+    alert("Erro no login: " + error.message);
+  }
+});
