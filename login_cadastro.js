@@ -53,7 +53,7 @@ document.querySelector('#form-login form').addEventListener('submit', async (e) 
 
   try {
     await Parse.User.logIn(email, senha);
-    window.location.href = "chat.html"; 
+    window.location.href = "chat/chat.html"; 
   } catch (error) {
     alert("Erro no login: " + error.message);
   }
