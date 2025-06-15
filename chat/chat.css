@@ -130,14 +130,15 @@ transform: translateX(-3px);
 }
 
 .bem-vindo {
-text-align: center;
-font-family: Arial, sans-serif;
-font-size: 18px;
-white-space: nowrap;
-overflow: hidden;
-border-right: 2px solid #333;
-animation: blink-cursor 0.75s step-end infinite;
-margin: 10px 0; 
+  text-align: center;
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  white-space: normal; 
+  word-wrap: break-word;
+  overflow: hidden;
+  border-right: 2px solid #333;
+  animation: blink-cursor 0.75s step-end infinite;
+  margin: 10px 10px; 
 }
 
 @keyframes blink-cursor {
@@ -148,3 +149,11 @@ from, to {
     border-color: #333;
 }
 }
+
+@media (max-width: 600px) {
+  .bem-vindo {
+    font-size: 16px;
+    padding: 0 10px;
+  }
+}
+
